@@ -27,3 +27,10 @@ Access the external metrics by querying the kubernetes API directly:
 When you are finished, you can clean up by executing
 
 `make delete`
+
+#### Useful commands
+kubectl get pods -n external-metrics # Get all pods for this namespace
+
+kubectl describe hpa hello-world-autoscaler -n external-metrics # Get HPA information
+
+
