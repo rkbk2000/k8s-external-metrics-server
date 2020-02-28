@@ -8,6 +8,7 @@ build:
 	docker build -f build/Dockerfile -t external-metrics-server .
 
 deploy:
+	sh build/add_user_role.sh
 	kubectl apply -f build/external-metrics-server.yaml
 	kubectl apply -f build/beanstalkd.yaml
 	kubectl apply -f build/hpa.yaml
